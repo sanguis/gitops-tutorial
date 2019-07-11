@@ -54,7 +54,7 @@ spec:
         # There are no ":latest" images for flux. Find the most recent
         # release or image version at https://quay.io/weaveworks/flux
         # and replace the tag here.
-        image: quay.io/weaveworks/flux:1.8.1
+        image: fluxcd/flux:1.13.2
         imagePullPolicy: IfNotPresent
         resources:
           requests:
@@ -100,8 +100,8 @@ spec:
         - --ssh-keygen-dir=/var/fluxd/keygen
 
         # replace or remove the following URL
-        - --git-url=git@github.com:weaveworks/flux-get-started
-        - --git-branch=master
+        - --git-url=git@github.com:sanguis/flux-get-started
+        - --git-branch=progress
 
         # include these next two to connect to an "upstream" service
         # (e.g., Weave Cloud). The token is particular to the service.
